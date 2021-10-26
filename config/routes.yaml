@@ -1,0 +1,22 @@
+index:
+    path: /
+    controller: App\Controller\DefaultController::index
+
+test:
+    path: /acceuil
+    controller: App\Controller\Test::test
+
+dashboard:
+    path: /dashboard  #/dashboard/{age}
+    controller: App\Controller\Dashboard::dashboard
+
+gestpara:
+    path: /gestpara/{id}  #/dashboard/{age}
+    controller: App\Controller\Gestpara::index
+    defaults:
+        id: 0
+    requirements: 
+        id: \d+
+    methods: [POST, GET]
+    host: localhost
+    schemes: [http, https]
