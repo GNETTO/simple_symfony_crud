@@ -2,8 +2,12 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\Student;
+
+use Doctrine\Persistence\ObjectManager;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 
 class DefaultController extends AbstractController
@@ -13,9 +17,19 @@ class DefaultController extends AbstractController
         return $this->render('blog/home.html.twig', []);
     }
 
-    public function inscription()
+    public function inscription(Request $req, ObjectManager $manager)
     {
-        return $this->render('blog/inscription.html.twig', []);
+        $student = new Student();
+        $form = $this->createFormBuilder($student)
+            ->add('nom')
+            ->add('prenoms')
+            ->add('email')
+            ->add('password')
+            ->add('description')
+            ->getForm();
+        return $this->render('blog/inscription.html.twig', [
+            'formStudent' => $form->createView()
+        ]);
     }
 
     public function dashboard()

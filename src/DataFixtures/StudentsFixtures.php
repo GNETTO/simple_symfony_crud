@@ -13,8 +13,8 @@ class StudentsFixtures extends Fixture
 
         for ($i = 0; $i <= 10; $i++) {
             $student = new Student();
-            $student->setNom("ABC_" . $i)
-                ->setPrenoms("Prenom_" . $i)
+            $student->setNom("ABC_")
+                ->setPrenoms("Prenom_")
                 ->setEmail("monsieur.gnet@gmail.com")
                 ->setPassword("1234")
                 ->setDescription("Bonne description");
