@@ -6,8 +6,10 @@
 			{% block title %}Welcomeg!
 			{% endblock %}
 		</title>
+		<link
+		href="assets/bootstrap.min.css" rel="stylesheet">
 		{# Run `composer require symfony/webpack-encore-bundle`
-		           and uncomment the following Encore helpers to start using Symfony UX #}
+																																																						  and uncomment the following Encore helpers to start using Symfony UX #}
 		{% block stylesheets %}
 			{#{{ encore_entry_link_tags('app') }}#}
 		{% endblock %}
@@ -15,8 +17,45 @@
 		{% block javascripts %}
 			{#{{ encore_entry_script_tags('app') }}#}
 		{% endblock %}
+
 	</head>
 	<body>
-		{% block body %}{% endblock %}
-	</body>
-</html>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 32 32" fill="#5B5B5B" width="50">
+						<path d="M16 3C8.832 3 3 8.832 3 16C3 23.168 8.832 29 16 29C23.168 29 29 23.168 29 16C29 8.832 23.168 3 16 3 z M 16 5C22.065 5 27 9.935 27 16C27 22.065 22.065 27 16 27C9.935 27 5 22.065 5 16C5 9.935 9.935 5 16 5 z M 20.271484 10.076172C20.198484 10.078172 17.758172 9.941625 16.326172 14.140625C15.938172 13.821625 14.100406 11.630484 12.066406 13.146484C11.336406 13.692484 10.854172 14.993797 11.951172 16.216797C12.604172 16.915797 12.980594 17.192953 12.808594 17.751953C12.455594 18.899953 10.66775 18.373687 10.84375 17.804688C10.89575 17.634688 10.978938 17.631781 11.085938 17.300781C11.383938 16.324781 10.040953 15.847344 9.7519531 16.777344C9.5859531 17.319344 9.8434687 18.298562 11.230469 18.726562C12.854469 19.225562 14.228828 18.3405 14.423828 17.1875C14.547828 16.4655 14.221047 15.929281 13.623047 15.238281L13.136719 14.699219C12.841719 14.402219 12.739922 13.900625 13.044922 13.515625C13.301922 13.189625 13.668531 13.051844 14.269531 13.214844C15.146531 13.452844 15.537453 14.061734 16.189453 14.552734C16.142453 14.706734 15.804281 15.797937 15.488281 17.710938C15.022281 20.156938 14.665234 21.499531 13.740234 22.269531C13.554234 22.404531 13.287719 22.603188 12.886719 22.617188C12.811719 22.620187 12.342594 22.508766 12.808594 22.134766C13.395594 21.813766 13.077375 20.795219 12.234375 20.824219C11.854375 20.836219 11.276828 21.192656 11.298828 21.847656C11.320828 22.523656 11.950391 23.031047 12.900391 22.998047C13.408391 22.981047 14.541203 22.775266 15.658203 21.447266C17.193203 19.647266 17.485391 17.509797 17.900391 15.216797C19.891391 15.452797 20.876625 14.529797 20.890625 13.841797C20.911625 12.905797 19.81025 12.938672 19.65625 13.638672C19.58225 13.978672 20.174891 14.284984 19.712891 14.583984C19.385891 14.795984 18.798656 14.945219 17.972656 14.824219C18.369656 12.634219 18.709187 10.4875 20.242188 10.4375C20.347188 10.4315 20.729281 10.443312 20.738281 10.695312C20.743281 10.903312 20.476328 11.067875 20.486328 11.421875C20.501328 11.823875 20.806047 12.086313 21.248047 12.070312C21.839047 12.049312 22.008047 11.475687 21.998047 11.179688C21.973047 10.483688 21.240484 10.045172 20.271484 10.076172 z" fill="#5B5B5B"/>
+					</svg>
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarColor02">
+					<ul class="navbar-nav me-auto">
+						<li class="nav-item">
+							<a class="nav-link active" href="/">Acceuil
+
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="/contact">Contact</a>
+						</li>
+
+					</ul>
+					<form class="d-flex" action="/dashboard">
+						<input class="form-control me-sm-2" type="text" placeholder="Search">
+						<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<div class="container"> {% block body %}{% endblock %}
+			</div>
+			<script src="assets/popper.min.js"></script>
+			<script src="assets/bootstrap.min.js"></script>
+
+			<script src="assets/query-3.2.1.slim.min.js"></script>
+		</body>
+	</html>

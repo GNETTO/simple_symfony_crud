@@ -2,10 +2,24 @@
 
 namespace App\Controller;
 
-class DefaultController
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+
+
+class DefaultController extends AbstractController
 {
     public function index()
     {
-        echo "hELLO SYMFONY";
+        return $this->render('blog/home.html.twig', []);
+    }
+
+    public function inscription()
+    {
+        return $this->render('blog/inscription.html.twig', []);
+    }
+
+    public function dashboard()
+    {
+        return $this->render('blog/dashboard.html.twig', []);
     }
 }
