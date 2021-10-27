@@ -31,7 +31,6 @@ class DefaultController extends AbstractController
             $this->entitiesManager = $this->getDoctrine()->getManager();
             $student = new Student();
 
-
             $student->setNom($req->request->get('nom'));
             $student->setPrenoms($req->request->get('prenom'));
             $student->setEmail($req->request->get('email'));
@@ -65,7 +64,7 @@ class DefaultController extends AbstractController
         return $this->render('blog/dashboard.html.twig', []);
     }
 
-    public function tous()
+    public function tous(): Response
     {
         $students = $this->getDoctrine()
             ->getRepository(Student::class)
