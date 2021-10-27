@@ -6,8 +6,47 @@
 			Bienvenue sur Symfony Inscription
 		</h2>
 		<div class=" p-3 w-50 border m-auto">
-			{{form(formStudent)}}
-			</div>
+
+			<form action="" method="post">
+				<fieldset>
+					<div class="form-group row">
+						<label for="staticEmail" class="col-lg-3 col-form-label ">Nom</label>
+						<div class="col-lg-9">
+							<input type="text" class="form-control" id="nom" name="nom" value="" placeholder="Nom">
+						</div>
+					</div>
+
+					<div class="form-group row mt-2 ">
+						<label for="exampleInputEmail1" class="form-label col-lg-3">Prenoms</label>
+						<div class="col-lg-9">
+							<input type="text" class="form-control" id="prenom" name="prenom" aria-describedby="emailHelp" placeholder="Prenoms">
+						</div>
+					</div>
+
+					<div class="form-group  row mt-2 ">
+						<label for="exampleInputEmail1" class="form-label col-lg-3">Email</label>
+						<div class="col-lg-9">
+							<input type="email" class="form-control" id="prenom" name="prenom" aria-describedby="emailHelp" placeholder="Email">
+						</div>
+					</div>
+
+					<div class="form-group row mt-2">
+						<label for="exampleInputPassword1" class="form-label col-lg-3 ">Password</label>
+						<div class="col-lg-9">
+							<input type="password" class="form-control" id="password" name="password" placeholder="Password">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="exampleTextarea" class="form-label mt-4">Votre description</label>
+						<textarea class="form-control" id="exampleTextarea" rows="3" id="decs" name="desc"></textarea>
+					</div>
+					<div class="d-flex justify-content-between">
+						<button type="submit" class="btn btn-success mt-4">Inscription</button>
+						<a href="/" class="btn btn-warning mt-4">Retour</a>
+					</div>
+				</fieldset>
+			</form>
 		</div>
 
 	{% endblock %}

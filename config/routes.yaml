@@ -2,11 +2,19 @@ index:
     path: /
     controller: App\Controller\DefaultController::index
 
+
+    
 inscription:
     path: /inscription
     controller: App\Controller\DefaultController::inscription
-
+    methods:
+        [GET, POST]
+        
 dashboard: 
     path: /dashboard
     controller: App\Controller\DefaultController::dashboard
+
+tous: 
+    path: /tous
+    controller: App\Controller\DefaultController::tous
 
