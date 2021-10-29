@@ -1,6 +1,6 @@
-index:
-    path: /
-    controller: App\Controller\DefaultController::index
+#index:
+#    path: /
+#   controller: App\Controller\DefaultController::index
 
 
     
@@ -18,3 +18,10 @@ tous:
     path: /tous
     controller: App\Controller\DefaultController::tous
 
+update: 
+    path: /modification/{id}
+    controller: App\Controller\DefaultController::modification
+
+delete: 
+    path: /suppression/{id}
+    controller: App\Controller\DefaultController::suppression
